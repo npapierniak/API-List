@@ -13,9 +13,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(categories, id: \.self) { category in
-                NavigationLink(destination: Text(category)) {
+                NavigationLink(destination: EntryView(category: category)) {
                     Text (category)
                 }
+                
             }
             .navigationTitle("API Categories")
         }
